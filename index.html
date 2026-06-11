@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suruchi Doke | AI & Data Science Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Suruchi Ramdas Doke, an Artificial Intelligence & Data Science Engineering student specializing in Software Development.">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Ambient Glowing Background Blobs -->
+  <div class="ambient-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="logo" id="logo">
+        SURUCHI<span class="logo-dot"></span>DOKE
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Toggle Button for Mobile -->
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="hero-tag">
+          <span class="hero-tag-pulse"></span>
+          Open for Software Engineering Placements & Internships
+        </div>
+        <h1 class="hero-title">
+          Designing Digital <br>
+          <span class="text-gradient">Masterpieces</span>
+        </h1>
+        <div class="hero-subtitle">
+          I am a <span id="typed-text"></span><span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-desc">
+          I build robust software solutions, model machine learning pipelines, and analyze complex datasets. Designing clean architectures and solving algorithmic challenges is my passion.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">
+            View My Work <i data-lucide="arrow-up-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            Get In Touch <i data-lucide="mail"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual reveal reveal-delay-2">
+        <div class="hero-glow-sphere">
+          <div class="hero-inner-icon">
+            <i data-lucide="code-xml" style="width: 80px; height: 80px;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section" id="about">
+    <div class="container">
+      <h2 class="section-title reveal"><span>About Me</span></h2>
+      
+      <div class="about-grid">
+        <div class="about-img-wrapper glass-card reveal">
+          <img src="assets/profile.png" alt="Suruchi Doke Profile" class="about-img" id="profile-img">
+        </div>
+        
+        <div class="about-info reveal reveal-delay-2">
+          <h3>Crafting beautiful digital solutions</h3>
+          <p class="about-bio">
+            Hello! I'm Suruchi Ramdas Doke, a Bachelor of Engineering student in Artificial Intelligence and Data Science. I am highly motivated to build a career in software development and engineer systems that leverage machine learning, intelligent backend architectures, and modern web tech.
+          </p>
+          <p class="about-bio">
+            My workflow centers around standard compliance, clean styling structures, performance optimization, and accessibility. Whether developing interactive dashboards or launching a creative SaaS landing page, I focus on delivering memorable user journeys.
+          </p>
+          
+          <h3 style="margin-top: 3rem; margin-bottom: 1rem;">My Toolkit</h3>
+          <div class="skills-container">
+            <!-- Languages & Web -->
+            <div class="skill-category glass-card">
+              <h4><i data-lucide="code-xml"></i> Languages & Web</h4>
+              <div class="skill-list">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">HTML5 / CSS3</span>
+              </div>
+            </div>
+            
+            <!-- AI & Data Science -->
+            <div class="skill-category glass-card">
+              <h4><i data-lucide="brain"></i> AI & Data Science</h4>
+              <div class="skill-list">
+                <span class="skill-tag">NumPy</span>
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">Scikit-Learn</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">Matplotlib & Seaborn</span>
+              </div>
+            </div>
+
+            <!-- Software & Tools -->
+            <div class="skill-category glass-card">
+              <h4><i data-lucide="terminal"></i> Software & Tools</h4>
+              <div class="skill-list">
+                <span class="skill-tag">Git / GitHub</span>
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">MySQL / PostgreSQL</span>
+                <span class="skill-tag">Figma / UI Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <h2 class="section-title reveal"><span>My Journey</span></h2>
+      
+      <div class="timeline">
+        <!-- Item 1 (Left) -->
+        <div class="timeline-item timeline-item-left reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-date">2023 - 2027</div>
+            <h3 class="timeline-title">B.E. in Artificial Intelligence & Data Science</h3>
+            <div class="timeline-company">Engineering College</div>
+            <p class="timeline-desc">Acquiring foundational concepts in Data Structures & Algorithms, Machine Learning modeling, Databases (SQL/MySQL), and Software Engineering fundamentals. Preparing actively for tech placement drives.</p>
+          </div>
+        </div>
+
+        <!-- Item 2 (Right) -->
+        <div class="timeline-item timeline-item-right reveal reveal-delay-1">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-date">2024 - PRESENT</div>
+            <h3 class="timeline-title">Software Development Prep & Training</h3>
+            <div class="timeline-company">Self-Guided Study</div>
+            <p class="timeline-desc">Building backend and frontend web solutions using React, Node.js, and Java. Actively practicing coding problems on DSA platforms to strengthen logic and software design skills.</p>
+          </div>
+        </div>
+
+        <!-- Item 3 (Left) -->
+        <div class="timeline-item timeline-item-left reveal reveal-delay-2">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-date">2023 - PRESENT</div>
+            <h3 class="timeline-title">Member & Event Coordinator</h3>
+            <div class="timeline-company">Marathi Vangmay Mandal (Cultural Club)</div>
+            <p class="timeline-desc">Assisting in managing and organizing literary and cultural activities. Built teamwork capabilities, event management skills, and cross-functional coordination experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal"><span>Featured Work</span></h2>
+      
+      <!-- Filters -->
+      <div class="projects-filter reveal">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="ai-ml">AI & ML</button>
+        <button class="filter-btn" data-filter="data-science">Data Science</button>
+        <button class="filter-btn" data-filter="software-dev">Software Dev</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card glass-card reveal" data-category="ai-ml data-science">
+          <div class="project-img-container">
+            <img src="assets/safeflow.png" alt="SafeFlow: AI Intrusion Analyser" class="project-img">
+            <div class="project-overlay">
+              <a href="https://www.linkedin.com/in/suruchi-doke-965899283/" target="_blank" class="project-icon-btn" title="LinkedIn Update"><i data-lucide="linkedin"></i></a>
+              <a href="https://github.com/Suruchidoke" target="_blank" class="project-icon-btn" title="GitHub Repo"><i data-lucide="github"></i></a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="project-tag">AI & Cybersecurity</span>
+              <span class="project-tag">Telemetry Analytics</span>
+            </div>
+            <h3 class="project-title">SafeFlow</h3>
+            <p class="project-desc">A real-time, AI-driven website security system designed to detect and mitigate malicious network traffic, utilizing an Isolation Forest anomaly detector and a PPO Reinforcement Learning decision engine.</p>
+            <div class="project-links-footer">
+              <span class="project-link"><i data-lucide="brain"></i> Stable-Baselines3</span>
+              <span class="project-link"><i data-lucide="code"></i> Python / React</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card reveal reveal-delay-1" data-category="software-dev">
+          <div class="project-img-container">
+            <img src="assets/tracezero.png" alt="TraceZero: Privacy Protector" class="project-img">
+            <div class="project-overlay">
+              <a href="https://www.linkedin.com/in/suruchi-doke-965899283/" target="_blank" class="project-icon-btn" title="LinkedIn Update"><i data-lucide="linkedin"></i></a>
+              <a href="https://github.com/Suruchidoke" target="_blank" class="project-icon-btn" title="GitHub Repo"><i data-lucide="github"></i></a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="project-tag">Security & Privacy</span>
+              <span class="project-tag">Desktop App</span>
+            </div>
+            <h3 class="project-title">TraceZero</h3>
+            <p class="project-desc">A modern, privacy-focused desktop application and CLI tool designed to protect user privacy by scrubbing hidden EXIF, author, and location metadata from images, PDFs, DOCX, and ZIP archives.</p>
+            <div class="project-links-footer">
+              <span class="project-link"><i data-lucide="terminal"></i> Java / JavaFX</span>
+              <span class="project-link"><i data-lucide="eye-off"></i> Metadata Sanitizer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-card reveal reveal-delay-2" data-category="software-dev">
+          <div class="project-img-container">
+            <img src="assets/feargo.png" alt="FearGo: Real-time Classroom Hub" class="project-img">
+            <div class="project-overlay">
+              <a href="https://www.linkedin.com/in/suruchi-doke-965899283/" target="_blank" class="project-icon-btn" title="LinkedIn Update"><i data-lucide="linkedin"></i></a>
+              <a href="https://github.com/Suruchidoke" target="_blank" class="project-icon-btn" title="GitHub Repo"><i data-lucide="github"></i></a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="project-tag">EdTech Solution</span>
+              <span class="project-tag">Mobile & Web App</span>
+            </div>
+            <h3 class="project-title">FearGo</h3>
+            <p class="project-desc">An interactive classroom engagement mobile and web app built using React Native and Supabase WebSockets, enabling real-time anonymous doubts, live pulse checks, and interactive MCQs.</p>
+            <div class="project-links-footer">
+              <span class="project-link"><i data-lucide="smartphone"></i> React Native / Expo</span>
+              <span class="project-link"><i data-lucide="database"></i> Supabase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Contact Section -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal"><span>Get In Touch</span></h2>
+      
+      <div class="contact-grid">
+        <!-- Contact Info column -->
+        <div class="contact-info-column reveal">
+          <div class="contact-card-sub glass-card">
+            <h3>Let's start a conversation</h3>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">Have a project in mind, looking to build something creative together, or just want to say hi? Send me a message!</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i data-lucide="mail"></i></div>
+                <div class="contact-info-details">
+                  <h4>Email</h4>
+                  <a href="mailto:suruchidoke@gmail.com">suruchidoke@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i data-lucide="map-pin"></i></div>
+                <div class="contact-info-details">
+                  <h4>Location</h4>
+                  <p>Navi Mumbai, India (Open to Remote)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links" style="margin-top: 2.5rem;">
+              <a href="https://github.com/Suruchidoke" target="_blank" class="social-icon" aria-label="GitHub"><i data-lucide="github"></i></a>
+              <a href="https://www.linkedin.com/in/suruchi-doke-965899283/" target="_blank" class="social-icon" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form column -->
+        <div class="contact-form-wrapper glass-card reveal reveal-delay-2">
+          <form id="contact-form">
+            <div class="form-group-row">
+              <div class="form-group">
+                <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                <label for="name" class="form-label">Full Name</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+                <label for="email" class="form-label">Email Address</label>
+              </div>
+            </div>
+            
+            <div class="form-group form-group-full">
+              <input type="text" id="subject" name="subject" class="form-input" placeholder=" ">
+              <label for="subject" class="form-label">Subject</label>
+            </div>
+
+            <div class="form-group form-group-full">
+              <textarea id="message" name="message" class="form-textarea" placeholder=" " required></textarea>
+              <label for="message" class="form-label">Your Message</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              Send Message <i data-lucide="send"></i>
+            </button>
+
+            <!-- Success/Error Feedback Messages -->
+            <div class="form-message success" id="form-success">
+              <i data-lucide="check-circle" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem; width: 18px; height: 18px;"></i>
+              Thank you! Your message has been sent successfully.
+            </div>
+            <div class="form-message error" id="form-error">
+              <i data-lucide="alert-triangle" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem; width: 18px; height: 18px;"></i>
+              Failed to send. Please check your network and try again.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-text">
+        &copy; 2026 Suruchi Doke. All rights reserved.
+      </div>
+      <div class="logo" style="font-size: 1.1rem;">
+        SURUCHI<span class="logo-dot" style="width:6px; height:6px;"></span>DOKE
+      </div>
+      <div class="footer-signature">
+        Designed & Built with <span>&hearts;</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Loader -->
+  <script src="script.js"></script>
+</body>
+</html>
