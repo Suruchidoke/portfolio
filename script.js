@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // First fade out
         card.style.opacity = '0';
         card.style.transform = 'scale(0.9) translateY(20px)';
-        
+
         setTimeout(() => {
           const category = card.getAttribute('data-category') || '';
           if (filterValue === 'all' || category.split(' ').includes(filterValue)) {
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // SCROLL REVEAL (INTERSECTION OBSERVER)
   // ==========================================
   const revealElements = document.querySelectorAll('.reveal');
-  
+
   if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn.innerHTML;
-      
+
       // Visual submitting state
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'Sending... <span class="typed-cursor">|</span>';
@@ -208,33 +208,33 @@ document.addEventListener('DOMContentLoaded', () => {
       // Prepare form data for Web3Forms API
       const formData = new FormData(contactForm);
       // Replace with your Web3Forms Access Key from https://web3forms.com
-      const ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+      const ACCESS_KEY = "877a4c50-56d0-4bbe-96dc-e39cfe8cf1d8";
       formData.append("access_key", ACCESS_KEY);
 
       fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData
       })
-      .then(async (response) => {
-        const result = await response.json();
-        if (response.status === 200 || result.success) {
-          formSuccess.style.display = 'block';
-          contactForm.reset();
-        } else {
+        .then(async (response) => {
+          const result = await response.json();
+          if (response.status === 200 || result.success) {
+            formSuccess.style.display = 'block';
+            contactForm.reset();
+          } else {
+            formError.style.display = 'block';
+            formError.innerHTML = `<i data-lucide="alert-triangle" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem; width: 18px; height: 18px;"></i> ${result.message || 'Failed to send. Please check your network and try again.'}`;
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+          }
+        })
+        .catch((error) => {
           formError.style.display = 'block';
-          formError.innerHTML = `<i data-lucide="alert-triangle" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem; width: 18px; height: 18px;"></i> ${result.message || 'Failed to send. Please check your network and try again.'}`;
+          formError.innerHTML = '<i data-lucide="alert-triangle" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem; width: 18px; height: 18px;"></i> Failed to send. Please check your network connection.';
           if (typeof lucide !== 'undefined') lucide.createIcons();
-        }
-      })
-      .catch((error) => {
-        formError.style.display = 'block';
-        formError.innerHTML = '<i data-lucide="alert-triangle" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem; width: 18px; height: 18px;"></i> Failed to send. Please check your network connection.';
-        if (typeof lucide !== 'undefined') lucide.createIcons();
-      })
-      .finally(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalBtnText;
-      });
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        });
     });
   }
 
