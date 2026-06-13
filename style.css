@@ -1347,3 +1347,95 @@ button {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+/* ==========================================
+   NEURAL NETWORK ANIMATION (ABOUT ME)
+   ========================================== */
+.network-visual-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(25, 17, 61, 0.5) 0%, rgba(10, 5, 27, 0.85) 100%);
+  border: 1px solid var(--glass-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.network-visual-wrapper::before {
+  display: none !important; /* Disable default dark image overlay */
+}
+
+.network-svg {
+  width: 90%;
+  height: 90%;
+  filter: drop-shadow(0 0 25px rgba(139, 92, 246, 0.2));
+}
+
+/* Multi-axis rotations for 3D parallax effect */
+.net-group-clockwise {
+  transform-origin: 200px 200px;
+  animation: rotateClockwise 35s infinite linear;
+}
+
+.net-group-counter {
+  transform-origin: 200px 200px;
+  animation: rotateCounter 25s infinite linear;
+}
+
+@keyframes rotateClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotateCounter {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+/* Pulsing Central AI Nucleus */
+.core-glow {
+  animation: corePulse 4s infinite ease-in-out;
+  transform-origin: 200px 200px;
+}
+
+@keyframes corePulse {
+  0%, 100% {
+    transform: scale(0.95);
+    opacity: 0.85;
+    filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.5));
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+    filter: drop-shadow(0 0 25px rgba(6, 182, 212, 0.95)) drop-shadow(0 0 45px rgba(139, 92, 246, 0.6));
+  }
+}
+
+/* Individual node pulsing */
+.node-pulse {
+  animation: nodePulsate 3s infinite ease-in-out;
+}
+
+@keyframes nodePulsate {
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Moving signal pulses along paths */
+.signal-path {
+  stroke-dasharray: 8 25;
+  animation: flowSignal 3s infinite linear;
+}
+
+@keyframes flowSignal {
+  to {
+    stroke-dashoffset: -66;
+  }
+}
+
+

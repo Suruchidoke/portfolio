@@ -93,8 +93,100 @@
       <h2 class="section-title reveal"><span>About Me</span></h2>
 
       <div class="about-grid">
-        <div class="about-img-wrapper glass-card reveal">
-          <img src="assets/profile.png" alt="Suruchi Doke Profile" class="about-img" id="profile-img">
+        <div class="about-img-wrapper glass-card reveal network-visual-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" class="network-svg">
+            <defs>
+              <linearGradient id="net-grad-violet-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8b5cf6" />
+                <stop offset="100%" stop-color="#06b6d4" />
+              </linearGradient>
+              <radialGradient id="core-glow-grad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#06b6d4" />
+                <stop offset="60%" stop-color="#8b5cf6" stop-opacity="0.6" />
+                <stop offset="100%" stop-color="transparent" />
+              </radialGradient>
+              <filter id="glow-heavy" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="10" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+
+            <!-- Outer Radar / Measurement Ring -->
+            <circle cx="200" cy="200" r="175" stroke="rgba(6, 182, 212, 0.08)" stroke-width="1.5" fill="none" stroke-dasharray="5 15" />
+            <circle cx="200" cy="200" r="160" stroke="rgba(139, 92, 246, 0.12)" stroke-width="1" fill="none" />
+
+            <!-- Group 2: Counter-Clockwise Rotations (Orbits & Flows) -->
+            <g class="net-group-counter">
+              <!-- Orbit Rings -->
+              <circle cx="200" cy="200" r="120" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" fill="none" stroke-dasharray="10 50" />
+              <circle cx="200" cy="200" r="60" stroke="rgba(6, 182, 212, 0.08)" stroke-width="1" fill="none" stroke-dasharray="2 10" />
+
+              <!-- Orbital Connections / Flow Arcs -->
+              <path d="M 200,80 A 120,120 0 0,1 320,200" fill="none" stroke="url(#net-grad-violet-cyan)" stroke-width="2" class="signal-path" />
+              <path d="M 200,320 A 120,120 0 0,1 80,200" fill="none" stroke="url(#net-grad-violet-cyan)" stroke-width="2" class="signal-path" />
+              
+              <!-- Orbital Nodes -->
+              <circle cx="200" cy="80" r="4" fill="#06b6d4" />
+              <circle cx="320" cy="200" r="4" fill="#8b5cf6" />
+              <circle cx="200" cy="320" r="4" fill="#06b6d4" />
+              <circle cx="80" cy="200" r="4" fill="#8b5cf6" />
+            </g>
+
+            <!-- Group 1: Clockwise Rotations (The Neural Web Core) -->
+            <g class="net-group-clockwise">
+              <!-- Connections (Lines) between nodes -->
+              <g stroke="rgba(255, 255, 255, 0.08)" stroke-width="1">
+                <line x1="275" y1="200" x2="317" y2="267" />
+                <line x1="275" y1="200" x2="317" y2="133" />
+                
+                <line x1="237" y1="265" x2="317" y2="267" />
+                <line x1="237" y1="265" x2="200" y2="335" />
+                
+                <line x1="162" y1="265" x2="200" y2="335" />
+                <line x1="162" y1="265" x2="83" y2="267" />
+                
+                <line x1="125" y1="200" x2="83" y2="267" />
+                <line x1="125" y1="200" x2="83" y2="133" />
+                
+                <line x1="162" y1="135" x2="83" y2="133" />
+                <line x1="162" y1="135" x2="200" y2="65" />
+                
+                <line x1="237" y1="135" x2="200" y2="65" />
+                <line x1="237" y1="135" x2="317" y2="133" />
+
+                <!-- Center to Inner nodes -->
+                <line x1="200" y1="200" x2="275" y2="200" stroke-width="1.5" stroke="rgba(6, 182, 212, 0.15)" />
+                <line x1="200" y1="200" x2="237" y2="265" stroke-width="1.5" stroke="rgba(6, 182, 212, 0.15)" />
+                <line x1="200" y1="200" x2="162" y2="265" stroke-width="1.5" stroke="rgba(6, 182, 212, 0.15)" />
+                <line x1="200" y1="200" x2="125" y2="200" stroke-width="1.5" stroke="rgba(6, 182, 212, 0.15)" />
+                <line x1="200" y1="200" x2="162" y2="135" stroke-width="1.5" stroke="rgba(6, 182, 212, 0.15)" />
+                <line x1="200" y1="200" x2="237" y2="135" stroke-width="1.5" stroke="rgba(6, 182, 212, 0.15)" />
+              </g>
+
+              <!-- Node Points -->
+              <!-- Inner Nodes (Radius 75) -->
+              <circle cx="275" cy="200" r="5" fill="#06b6d4" class="node-pulse" />
+              <circle cx="237" cy="265" r="5" fill="#8b5cf6" class="node-pulse" />
+              <circle cx="162" cy="265" r="5" fill="#06b6d4" class="node-pulse" />
+              <circle cx="125" cy="200" r="5" fill="#8b5cf6" class="node-pulse" />
+              <circle cx="162" cy="135" r="5" fill="#06b6d4" class="node-pulse" />
+              <circle cx="237" cy="135" r="5" fill="#8b5cf6" class="node-pulse" />
+
+              <!-- Outer Nodes (Radius 135) -->
+              <circle cx="317" cy="267" r="6" fill="#8b5cf6" class="node-pulse" filter="url(#glow-heavy)" />
+              <circle cx="200" cy="335" r="6" fill="#06b6d4" class="node-pulse" filter="url(#glow-heavy)" />
+              <circle cx="83" cy="267" r="6" fill="#8b5cf6" class="node-pulse" filter="url(#glow-heavy)" />
+              <circle cx="83" cy="133" r="6" fill="#06b6d4" class="node-pulse" filter="url(#glow-heavy)" />
+              <circle cx="200" cy="65" r="6" fill="#8b5cf6" class="node-pulse" filter="url(#glow-heavy)" />
+              <circle cx="317" cy="133" r="6" fill="#06b6d4" class="node-pulse" filter="url(#glow-heavy)" />
+            </g>
+
+            <!-- Central AI Nucleus Core -->
+            <g class="core-glow">
+              <circle cx="200" cy="200" r="28" fill="url(#core-glow-grad)" filter="url(#glow-heavy)" />
+              <circle cx="200" cy="200" r="10" fill="#ffffff" />
+            </g>
+          </svg>
         </div>
 
         <div class="about-info reveal reveal-delay-2">
