@@ -1372,12 +1372,14 @@ button {
 
 /* Multi-axis rotations for 3D parallax effect */
 .net-group-clockwise {
-  transform-origin: 200px 200px;
+  transform-origin: center;
+  transform-box: fill-box;
   animation: rotateClockwise 35s infinite linear;
 }
 
 .net-group-counter {
-  transform-origin: 200px 200px;
+  transform-origin: center;
+  transform-box: fill-box;
   animation: rotateCounter 25s infinite linear;
 }
 
@@ -1394,7 +1396,8 @@ button {
 /* Pulsing Central AI Nucleus */
 .core-glow {
   animation: corePulse 4s infinite ease-in-out;
-  transform-origin: 200px 200px;
+  transform-origin: center;
+  transform-box: fill-box;
 }
 
 @keyframes corePulse {
