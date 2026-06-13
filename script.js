@@ -191,32 +191,50 @@ document.addEventListener('DOMContentLoaded', () => {
       formSuccess.style.display = 'none';
       formError.style.display = 'none';
 
-      // Gather input data (mock check)
+      // Gather input data (validation check)
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
 
       if (!name || !email || !message) {
-        // Trigger validation error state
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
         formError.style.display = 'block';
-        formError.textContent = 'Please fill out all required fields.';
+        formError.innerHTML = '<i data-lucide="alert-triangle" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem; width: 18px; height: 18px;"></i> Please fill out all required fields.';
+        if (typeof lucide !== 'undefined') lucide.createIcons();
         return;
       }
 
-      // Simulate API submit latency
-      setTimeout(() => {
+      // Prepare form data for Web3Forms API
+      const formData = new FormData(contactForm);
+      // Replace with your Web3Forms Access Key from https://web3forms.com
+      const ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+      formData.append("access_key", ACCESS_KEY);
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      })
+      .then(async (response) => {
+        const result = await response.json();
+        if (response.status === 200 || result.success) {
+          formSuccess.style.display = 'block';
+          contactForm.reset();
+        } else {
+          formError.style.display = 'block';
+          formError.innerHTML = `<i data-lucide="alert-triangle" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem; width: 18px; height: 18px;"></i> ${result.message || 'Failed to send. Please check your network and try again.'}`;
+          if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+      })
+      .catch((error) => {
+        formError.style.display = 'block';
+        formError.innerHTML = '<i data-lucide="alert-triangle" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem; width: 18px; height: 18px;"></i> Failed to send. Please check your network connection.';
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      })
+      .finally(() => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
-
-        // Simulate success
-        formSuccess.style.display = 'block';
-        contactForm.reset();
-
-        // Clear label floating classes (since labels check placeholder-shown)
-        // Restoring form state triggers standard browser behavior
-      }, 1500);
+      });
     });
   }
 
